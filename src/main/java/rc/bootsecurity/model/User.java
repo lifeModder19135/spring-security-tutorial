@@ -20,17 +20,18 @@ public class User {
     @Column(nullable=false)
     private String password;
 
-    private int isActive;
+    private int active;
 
-    private String roles;
+    private String roles = "";
 
-    private String permissions;
+    private String permissions = "";
 
-    public user(String uname, String pwd, String roles, String permissions) {
+    public User(String uname, String pwd, String roles, String permissions) {
         this.username = uname;
         this.password = pwd;
         this.roles = roles;
         this.permissions = permissions;
-        this.isActive = 1;
-    };
+        this.active = 1;
+    }
+
 }
